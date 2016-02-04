@@ -13,7 +13,7 @@ class ContactsController < ApplicationController
             email = params[:contact][:email] #Saves Email
             body = params[:contact][:comments] #Saves Comment
             
-            ContactMailer.contact_emal(name, email, body).deliver
+            ContactMailer.contact_email(name, email, body).deliver
             
             #Flashes Message if message was a success
             flash[:success] = "Message Sent."
